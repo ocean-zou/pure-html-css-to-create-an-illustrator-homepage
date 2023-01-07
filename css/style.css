@@ -1,0 +1,155 @@
+:root {
+  --main-Color: linear-gradient(to right, red, yellow);
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: repeat(3 auto);
+  grid-gap: 10px;
+  max-width: 1200px;
+}
+
+header {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--main-Color);
+  color: black;
+  padding: 20px 25px;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 150px;
+  margin-right: 15px;
+}
+.logo .name {
+  font-style: 20px;
+}
+
+.social p {
+  font-style: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.sprite {
+  background-image: url(../src/spritesheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  scale: 0.5;
+}
+
+.sprite-001-facebook {
+  width: 64px;
+  height: 64px;
+  background-position: -5px -5px;
+}
+
+.sprite-002-instagram {
+  width: 64px;
+  height: 64px;
+  background-position: -79px -5px;
+}
+
+.sprite-003-twitter {
+  width: 64px;
+  height: 64px;
+  background-position: -5px -79px;
+}
+
+.sprite-004-linkedin {
+  width: 64px;
+  height: 64px;
+  background-position: -79px -79px;
+}
+
+main {
+  max-width: 1200px;
+  display: flex;
+}
+
+.nav {
+  width: 20%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+.nav li {
+  color: #333;
+  padding: 0px 0px 50px 0px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  list-style: none;
+  font-size: large;
+}
+.nav li a {
+  text-decoration: none;
+  position: fixed;
+  transition: all 0.8s ease 0s;
+}
+.nav li a:hover {
+  transform: translateY(-4px);
+}
+
+section {
+  max-width: 80%;
+  padding: 30px;
+}
+section .title {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+section .title h3 {
+  padding-bottom: 10px;
+}
+section .one_img img {
+  max-width: 100%;
+  padding: 40px;
+}
+section .two_img {
+  display: flex;
+  max-width: 100%;
+}
+section .two_img .book2 img {
+  width: 100%;
+}
+section .two_img .book3 img {
+  width: 100%;
+}
+section .four_img {
+  display: flex;
+  flex-wrap: wrap;
+}
+section .four_img img {
+  max-width: 40%;
+  padding: 20px;
+}
+section .three_img {
+  display: flex;
+}
+section .three_img img {
+  padding: 10px;
+}
+
+footer {
+  width: 100%;
+  background: var(--main-Color);
+  color: black;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+  height: 30px;
+}/*# sourceMappingURL=style.css.map */
