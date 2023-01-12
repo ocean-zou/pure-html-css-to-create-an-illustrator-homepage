@@ -14,7 +14,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   grid-gap: 1rem;
-  height: 100vh;
+
   max-width: 1200px;
 }
 
@@ -32,22 +32,23 @@ header {
 }
 .logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: start;
   img {
     width: 10rem;
     margin-right: 1rem;
   }
   .name {
-    font-style: 20px;
+    text-align: center;
+    font-size: 1rem;
   }
 }
 
 .social p {
-  font-style: 20px;
+  font-size: 1rem;
   margin-top: 10px;
   font-weight: 600;
-  // display: flex;
-  // flex-direction: column;
 }
 .sprite {
   background-image: url(../src/spritesheet.png);
@@ -107,25 +108,38 @@ main {
     }
   }
   content {
-    max-width: 80%;
+    width: 100%;
 
     margin: 1rem auto;
     // padding: 2rem;
     padding: 0 1rem;
     .homepageContent {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 3rem;
+      .video {
+        width: 50%;
+        height: 20rem;
+        video {
+          width: 100%;
+          height: 20rem;
+        }
+      }
       .info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         color: #333;
         padding: 1rem;
+        width: 40%;
+
         h3 {
           width: 100%;
           font-weight: 800;
         }
-
+        p {
+          text-align: justify;
+        }
         .btn {
           width: 100%;
           button {
@@ -154,16 +168,19 @@ main {
     }
     .myServices {
       display: flex;
+      flex-wrap: wrap;
       text-align: center;
       justify-content: space-between;
-
-      i {
-        font-size: 8rem;
-        color: var(--btn-Color);
-        padding: 2rem;
-      }
-      p {
-        padding: 2rem 1rem;
+      .myServicesCard {
+        width: 30%;
+        i {
+          font-size: 8rem;
+          color: var(--btn-Color);
+          padding: 2rem;
+        }
+        p {
+          padding: 2rem 1rem;
+        }
       }
     }
     .portfolio {
@@ -216,17 +233,14 @@ main {
     }
     .partyFigures {
       display: flex;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: space-between;
       img {
         width: 30%;
         padding: 10px;
       }
     }
-
     .priceSliders {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
       margin-bottom: 4rem;
       .sliders {
         width: 32rem;
@@ -251,9 +265,10 @@ main {
         .navigation {
           .navigationPosition {
             position: absolute;
-            width: 32rem;
+            // width: 10rem;
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            // justify-content: center;
 
             .navigationBtn {
               border: 2px solid var(--btn-Color);
@@ -358,16 +373,4 @@ footer {
   text-align: center;
   border-radius: 0px 0px 10px 10px;
   font-size: 0.7rem;
-}
-
-@media (max-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 992px) {
 }

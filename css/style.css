@@ -16,7 +16,6 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   grid-gap: 1rem;
-  height: 100vh;
   max-width: 1200px;
 }
 
@@ -34,18 +33,21 @@ header {
 
 .logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: start;
 }
 .logo img {
   width: 10rem;
   margin-right: 1rem;
 }
 .logo .name {
-  font-style: 20px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .social p {
-  font-style: 20px;
+  font-size: 1rem;
   margin-top: 10px;
   font-weight: 600;
 }
@@ -108,13 +110,22 @@ main .nav li a:hover {
   transform: translateY(-4px);
 }
 main content {
-  max-width: 80%;
+  width: 100%;
   margin: 1rem auto;
   padding: 0 1rem;
 }
 main content .homepageContent {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
+}
+main content .homepageContent .video {
+  width: 50%;
+  height: 20rem;
+}
+main content .homepageContent .video video {
+  width: 100%;
+  height: 20rem;
 }
 main content .homepageContent .info {
   display: flex;
@@ -122,10 +133,14 @@ main content .homepageContent .info {
   justify-content: space-between;
   color: #333;
   padding: 1rem;
+  width: 40%;
 }
 main content .homepageContent .info h3 {
   width: 100%;
   font-weight: 800;
+}
+main content .homepageContent .info p {
+  text-align: justify;
 }
 main content .homepageContent .info .btn {
   width: 100%;
@@ -152,15 +167,19 @@ main content .title h3 {
 }
 main content .myServices {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: space-between;
 }
-main content .myServices i {
+main content .myServices .myServicesCard {
+  width: 30%;
+}
+main content .myServices .myServicesCard i {
   font-size: 8rem;
   color: var(--btn-Color);
   padding: 2rem;
 }
-main content .myServices p {
+main content .myServices .myServicesCard p {
   padding: 2rem 1rem;
 }
 main content .portfolio {
@@ -212,7 +231,8 @@ main content .streetFigures .figureRight img {
 }
 main content .partyFigures {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 main content .partyFigures img {
   width: 30%;
@@ -247,9 +267,8 @@ main content .priceSliders .sliders .imgSlides .slide img {
 }
 main content .priceSliders .sliders .navigation .navigationPosition {
   position: absolute;
-  width: 32rem;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 main content .priceSliders .sliders .navigation .navigationPosition .navigationBtn {
   border: 2px solid var(--btn-Color);

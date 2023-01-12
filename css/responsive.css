@@ -1,0 +1,42 @@
+@media (max-width: 992px) {
+  #navBar {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .social {
+    display: none;
+  }
+  #videoPlay,
+  #infor,
+  #myServicesCardPictureBook,
+  #myServicesCardGraphicDesign,
+  #myServicesCardsandGifts,
+  #cardCat,
+  #cardCloud,
+  #cardSchool,
+  #cardPortfolio {
+    width: 100%;
+  }
+
+  .streetFigures {
+    flex-direction: column;
+  }
+  .partyFigures {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  #head {
+    width: 60%;
+  }
+  #main {
+    width: 60%;
+  }
+  .footer {
+    width: 60%;
+  }
+  #contactUsImgTag {
+    display: none;
+  }
+}

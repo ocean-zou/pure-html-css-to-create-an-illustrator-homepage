@@ -10,13 +10,14 @@
     <title>Illustrator | Huaning</title>
     <link rel="icon" href="./src/logo2.png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body id="Homepage">
-    <header class="header">
+    <header class="header" id="head">
       <div class="logo">
         <img src="./src/logo2.png" alt="illustrator logo" />
         <div class="name">
-          <h1>Huaning</h1>
+          <h2>Huaning</h2>
           <hr />
           <h2>Illustrator</h2>
         </div>
@@ -31,8 +32,8 @@
         </div>
       </div>
     </header>
-    <main>
-      <ul class="nav">
+    <main id="main">
+      <ul class="nav" id="navBar">
         <li class="active">
           <a href="#Homepage">Homepage</a>
         </li>
@@ -54,25 +55,26 @@
       </ul>
       <content>
         <div class="homepageContent">
-          <div class="video">
-            <video width="420" height="320" controls>
+          <div class="video" id="videoPlay">
+            <!-- <video width="420" height="320" controls> -->
+            <video controls>
               <source src="./src/illustration.mp4" type="video/mp4" />
             </video>
           </div>
-          <div class="info">
+          <div class="info" id="infor">
             <h3>Who I am</h3>
             <div>
               <p>
                 I'm Huaning, a freelance illustrator with over five years of
-                professional experience. In that time I've worked on a wide
-                variety of projects for many press,magazines, as well as
+                professional experience. In that time I have worked on a wide
+                variety of projects for many press, magazines, as well as
                 projects for individuals like greetings cards, gift
                 illustrations.
               </p>
             </div>
             <div class="btn">
               <button>
-                <a href="#Portfolio">EXPLORE MORE</a>
+                <a href="#services">EXPLORE MORE</a>
               </button>
             </div>
           </div>
@@ -85,7 +87,7 @@
               <hr />
             </div>
             <div class="myServices">
-              <div class="myServicesPictureBooks">
+              <div class="myServicesCard" id="myServicesCardPictureBook">
                 <i class="fa-solid fa-book-open"></i>
                 <h4>Picture Books</h4>
                 <p>
@@ -93,7 +95,7 @@
                   at understanding exactly what my clients are looking for.
                 </p>
               </div>
-              <div class="myServicesGraphyDesigning">
+              <div class="myServicesCard" id="myServicesCardGraphicDesign">
                 <i class="fas fa-4x fa-palette"></i>
                 <h4>Graphic Designing</h4>
                 <p>
@@ -101,7 +103,7 @@
                   advertising material, logo designs and website artwork.
                 </p>
               </div>
-              <div class="myServicesCardsandGifts">
+              <div class="myServicesCard" id="myServicesCardsandGifts">
                 <i class="fa-solid fa-gift"></i>
                 <h4>Cards and Gifts</h4>
                 <p>
@@ -120,7 +122,7 @@
             <hr />
           </div>
           <div class="portfolio">
-            <div class="card">
+            <div class="card" id="cardCat">
               <a href="./cat.html">
                 <img src="./src/cat6.png" alt="children's-book-cat" />
               </a>
@@ -130,7 +132,7 @@
                 <p>Beijing Huyang Culture Pty ltd</p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardCloud">
               <a href="./could.html">
                 <img src="./src/cloud4.png" alt="children's-book-cloud" />
               </a>
@@ -140,7 +142,7 @@
                 <p>Meilihua Picture Book Institution</p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardSchool">
               <a href="./school.html">
                 <img src="./src/mag1.png" alt="magazine-school" />
               </a>
@@ -150,7 +152,7 @@
                 <p>China Campus Literature</p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardPortfolio">
               <a href="./portfolio.html">
                 <img src="./src/pro1.png" alt="Portfolio-narcissus" />
               </a>
@@ -168,7 +170,7 @@
             <hr />
           </div>
           <div class="streetFigures">
-            <div class="figureLeft">
+            <div class="figureLeft" id="figureLeft">
               <img src="./src/str1.png" alt="streetFigures" />
             </div>
             <div class="figureRight">
@@ -298,14 +300,14 @@
               <input type="submit" value="Submit" />
             </form>
           </div>
-          <div class="contactUsImg">
+          <div class="contactUsImg" id="contactUsImgTag">
             <i class="fa-solid fa-comment"></i>
             <h3>Let's Talk</h3>
           </div>
         </div>
       </content>
     </main>
-    <footer>
+    <footer class="footer">
       <p>
         &copy Huaning 2023 Australia, VIC, Melbourne Tel:123456789
         Email:Hauning@gmail.com
