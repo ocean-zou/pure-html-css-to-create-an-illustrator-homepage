@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 :root {
   --main-Color: linear-gradient(to right, red, yellow);
+  --btn-Color: orange;
 }
 
 * {
@@ -131,7 +132,7 @@ main content .homepageContent .info .btn {
 }
 main content .homepageContent .info .btn button {
   padding: 1rem 0;
-  background-color: yellow;
+  background-color: var(--btn-Color);
   border: none;
   border-radius: 0.5rem;
   margin-top: 1rem;
@@ -149,6 +150,19 @@ main content .title h3 {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
+main content .myServices {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+main content .myServices i {
+  font-size: 8rem;
+  color: var(--btn-Color);
+  padding: 2rem;
+}
+main content .myServices p {
+  padding: 2rem 1rem;
+}
 main content .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -162,9 +176,9 @@ main content .portfolio .card {
 }
 main content .portfolio .card .tag {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   right: 1rem;
-  background-color: yellow;
+  background-color: var(--btn-Color);
   border-radius: 8px;
   padding: 0.2rem;
 }
@@ -196,28 +210,93 @@ main content .streetFigures .figureRight img {
   padding: 10px;
   width: 100%;
 }
+main content .partyFigures {
+  display: flex;
+  justify-content: space-around;
+}
 main content .partyFigures img {
-  width: 33%;
+  width: 30%;
   padding: 10px;
 }
-main content .priceType {
-  text-align: center;
+main content .priceSliders {
+  margin-bottom: 4rem;
+  /* The checked attribute is used with
+  reference to <input type="radio">,
+  when radio button is clicked the
+  class will shift w.r.t  left margin
+  as mentioned which results in image
+  slider */
 }
-main content .priceType label {
-  margin-right: 5rem;
+main content .priceSliders .sliders {
+  width: 32rem;
+  height: 20rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
-main content .priceType label:last-child {
+main content .priceSliders .sliders .imgSlides {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+main content .priceSliders .sliders .imgSlides input {
+  display: none;
+}
+main content .priceSliders .sliders .imgSlides .slide img {
+  width: 32rem;
+  height: 20rem;
+}
+main content .priceSliders .sliders .navigation .navigationPosition {
+  position: absolute;
+  width: 32rem;
+  display: flex;
+  justify-content: center;
+}
+main content .priceSliders .sliders .navigation .navigationPosition .navigationBtn {
+  border: 2px solid var(--btn-Color);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+main content .priceSliders .sliders .navigation .navigationPosition .navigationBtn:hover {
+  background: var(--btn-Color);
+}
+main content .priceSliders .sliders .navigation .navigationPosition .navigationBtn:not(:last-child) {
+  margin-right: 40px;
+}
+main content .priceSliders .sliders .navigation .navigationPosition:last-child {
   margin-right: 0;
 }
-main content .pricePicture img {
-  width: 16%;
-  padding: 10px;
+main content .priceSliders #radio1:checked ~ .first {
+  margin-left: 0;
+}
+main content .priceSliders #radio2:checked ~ .first {
+  margin-left: -100%;
+}
+main content .priceSliders #radio3:checked ~ .first {
+  margin-left: -200%;
+}
+main content .priceSliders #radio4:checked ~ .first {
+  margin-left: -300%;
+}
+main content .priceSliders #radio5:checked ~ .first {
+  margin-left: -400%;
 }
 main content .contactUs {
   display: flex;
 }
 main content .contactUs .contactUsImg {
-  margin: auto;
+  margin-top: 4rem;
+  position: relative;
+}
+main content .contactUs .contactUsImg i {
+  font-size: 10rem;
+  color: var(--btn-Color);
+}
+main content .contactUs .contactUsImg h3 {
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
 }
 main content .contactUs .contactUsTitle h3 {
   font-size: 2rem;
@@ -235,7 +314,7 @@ main content .contactUs .contactUsTitle textarea {
   border-radius: 8px;
 }
 main content .contactUs .contactUsTitle input[type=submit] {
-  background-color: yellow;
+  background-color: var(--btn-Color);
   margin: 1rem;
   width: 10rem;
   height: 2.5rem;

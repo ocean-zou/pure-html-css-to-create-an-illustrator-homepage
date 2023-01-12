@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 :root {
   --main-Color: linear-gradient(to right, red, yellow);
+  --btn-Color: orange;
 }
 * {
   margin: 0 auto;
@@ -107,6 +108,7 @@ main {
   }
   content {
     max-width: 80%;
+
     margin: 1rem auto;
     // padding: 2rem;
     padding: 0 1rem;
@@ -128,7 +130,7 @@ main {
           width: 100%;
           button {
             padding: 1rem 0;
-            background-color: yellow;
+            background-color: var(--btn-Color);
             border: none;
             border-radius: 0.5rem;
             margin-top: 1rem;
@@ -150,6 +152,20 @@ main {
         padding-bottom: 1rem;
       }
     }
+    .myServices {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+
+      i {
+        font-size: 8rem;
+        color: var(--btn-Color);
+        padding: 2rem;
+      }
+      p {
+        padding: 2rem 1rem;
+      }
+    }
     .portfolio {
       display: flex;
       flex-wrap: wrap;
@@ -162,9 +178,9 @@ main {
 
         .tag {
           position: absolute;
-          bottom: 2rem;
+          bottom: 4rem;
           right: 1rem;
-          background-color: yellow;
+          background-color: var(--btn-Color);
           border-radius: 8px;
           padding: 0.2rem;
         }
@@ -199,33 +215,108 @@ main {
       }
     }
     .partyFigures {
+      display: flex;
+      justify-content: space-around;
       img {
-        width: 33%;
+        width: 30%;
         padding: 10px;
       }
     }
 
-    .priceType {
-      text-align: center;
-      label {
-        margin-right: 5rem;
-        &:last-child {
-          margin-right: 0;
+    .priceSliders {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      margin-bottom: 4rem;
+      .sliders {
+        width: 32rem;
+        height: 20rem;
+        border-radius: 50%;
+        // border: 2px solid var(--btn-Color);
+        overflow: hidden;
+        .imgSlides {
+          position: relative;
+          width: 100%;
+          display: flex;
+          input {
+            display: none;
+          }
+          .slide {
+            img {
+              width: 32rem;
+              height: 20rem;
+            }
+          }
+        }
+        .navigation {
+          .navigationPosition {
+            position: absolute;
+            width: 32rem;
+            display: flex;
+            justify-content: center;
+
+            .navigationBtn {
+              border: 2px solid var(--btn-Color);
+              padding: 5px;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: 1s;
+              &:hover {
+                background: var(--btn-Color);
+              }
+              &:not(:last-child) {
+                margin-right: 40px;
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
         }
       }
-    }
-    .pricePicture {
-      img {
-        width: 16%;
-        padding: 10px;
+
+      /* The checked attribute is used with
+      reference to <input type="radio">,
+      when radio button is clicked the
+      class will shift w.r.t  left margin
+      as mentioned which results in image
+      slider */
+
+      #radio1:checked ~ .first {
+        margin-left: 0;
+      }
+      #radio2:checked ~ .first {
+        margin-left: -100%;
+      }
+
+      #radio3:checked ~ .first {
+        margin-left: -200%;
+      }
+
+      #radio4:checked ~ .first {
+        margin-left: -300%;
+      }
+
+      #radio5:checked ~ .first {
+        margin-left: -400%;
       }
     }
-
     .contactUs {
       display: flex;
 
       .contactUsImg {
-        margin: auto;
+        margin-top: 4rem;
+        position: relative;
+        i {
+          font-size: 10rem;
+          color: var(--btn-Color);
+        }
+        h3 {
+          position: absolute;
+          top: 4rem;
+          right: 3rem;
+        }
       }
       .contactUsTitle {
         h3 {
@@ -248,7 +339,7 @@ main {
         }
 
         input[type="submit"] {
-          background-color: yellow;
+          background-color: var(--btn-Color);
           margin: 1rem;
           width: 10rem;
           height: 2.5rem;
@@ -267,4 +358,16 @@ footer {
   text-align: center;
   border-radius: 0px 0px 10px 10px;
   font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
 }

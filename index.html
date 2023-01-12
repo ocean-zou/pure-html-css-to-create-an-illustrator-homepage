@@ -37,6 +37,9 @@
           <a href="#Homepage">Homepage</a>
         </li>
         <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
           <a href="#Portfolio">Portfolio</a>
         </li>
         <li>
@@ -74,7 +77,44 @@
             </div>
           </div>
         </div>
-        <div class="myRecentWorks" id="Portfolio">
+        <!-- myService -->
+        <div class="myServiceContent" id="services">
+          <div class="container">
+            <div class="title">
+              <h3>MY SERVICES</h3>
+              <hr />
+            </div>
+            <div class="myServices">
+              <div class="myServicesPictureBooks">
+                <i class="fa-solid fa-book-open"></i>
+                <h4>Picture Books</h4>
+                <p>
+                  Having illustrated many children's books, I've got pretty good
+                  at understanding exactly what my clients are looking for.
+                </p>
+              </div>
+              <div class="myServicesGraphyDesigning">
+                <i class="fas fa-4x fa-palette"></i>
+                <h4>Graphic Designing</h4>
+                <p>
+                  I do a lot of work for corporate clients, including
+                  advertising material, logo designs and website artwork.
+                </p>
+              </div>
+              <div class="myServicesCardsandGifts">
+                <i class="fa-solid fa-gift"></i>
+                <h4>Cards and Gifts</h4>
+                <p>
+                  Personalised greeting cards and illustrations make a
+                  fantastic, unique gift, and for businesses they're a great way
+                  to keep in touch with your clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- myRecentWorks -->
+        <div class="myRecentWorksContent" id="Portfolio">
           <div class="title">
             <h3>MY RECENT WORKS</h3>
             <hr />
@@ -143,7 +183,7 @@
           </div>
         </div>
 
-        <div id="Prices">
+        <div class="pricesContent" id="Prices">
           <div class="title">
             <h3>PRICES</h3>
             <hr />
@@ -156,70 +196,60 @@
               after, but this can always be adjusted to meet your needs.
             </p>
           </div>
-          <div class="priceType">
-            <label for="price1"
-              >$70<input
-                type="radio"
-                name="price"
-                id="price1"
-                class="worth70img"
-                checked
-              />
-            </label>
-            <label for="price2"
-              >$110<input
-                type="radio"
-                name="price"
-                id="price2"
-                class="worth110img"
-            /></label>
-            <label for="price3"
-              >$130<input
-                type="radio"
-                name="price"
-                id="price3"
-                class="worth130img"
-            /></label>
-            <label for="price4"
-              >$150<input
-                type="radio"
-                name="price"
-                id="price4"
-                class="worth150img"
-            /></label>
-            <label for="price5"
-              >$190<input
-                type="radio"
-                name="price"
-                id="price5"
-                class="worth190img"
-            /></label>
-            <label for="price6"
-              >$210<input
-                type="radio"
-                name="price"
-                id="price6"
-                class="worth210img"
-            /></label>
-          </div>
-            <div class="pricePicture">
-              <img src="./src/price1.png" alt="" />
-              <img src="./src/price2.png" alt="" />
-              <img src="./src/price3.png" alt="" />
-              <img src="./src/price4.png" alt="" />
-              <img src="./src/price5.png" alt="" />
-              <img src="./src/price6.png" alt="" />
+
+          <!-- Image slider start -->
+          <div class="priceSliders">
+            <div class="sliders">
+              <div class="imgSlides">
+                <!-- Radio buttons start -->
+
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+
+                <input type="radio" name="radio-btn" id="radio3" />
+
+                <input type="radio" name="radio-btn" id="radio4" />
+
+                <input type="radio" name="radio-btn" id="radio5" />
+
+                <!-- Radio buttons end -->
+                <!-- Embedding  images start -->
+                <div class="first slide">
+                  <img src="../src/price1.png" />
+                </div>
+                <div class="slide">
+                  <img src="../src/price2.png" />
+                </div>
+                <div class="slide">
+                  <img src="../src/price3.png" />
+                </div>
+                <div class="slide">
+                  <img src="../src/price4.png" />
+                </div>
+                <div class="slide">
+                  <img src="../src/price6.png" />
+                </div>
+
+                <!-- Embedding images end -->
+              </div>
+
+              <!-- Navigation start -->
+              <div class="navigation">
+                <div class="navigationPosition">
+                  <label for="radio1" class="navigationBtn">$70</label>
+                  <label for="radio2" class="navigationBtn">$110</label>
+                  <label for="radio3" class="navigationBtn">$130</label>
+                  <label for="radio4" class="navigationBtn">$170</label>
+                  <label for="radio5" class="navigationBtn">$210</label>
+                </div>
+              </div>
+              <!-- Navigation end -->
             </div>
-          </div>
-          <div class="pricePictureExample">
-            <img src="./src/price1.png" alt="" />
+            <!-- Image slider end -->
           </div>
         </div>
 
         <div class="contactUs" id="Contact">
-          <div class="contactUsImg">
-            <img src="./src/mailSending.jpg" alt="get in touch img" />
-          </div>
           <div class="contactUsTitle">
             <h3>GET IN TOUCH</h3>
             <hr />
@@ -261,11 +291,16 @@
               <textarea
                 id="message"
                 name="message"
+                rows="6"
                 placeholder="Write something.."
               ></textarea>
 
               <input type="submit" value="Submit" />
             </form>
+          </div>
+          <div class="contactUsImg">
+            <i class="fa-solid fa-comment"></i>
+            <h3>Let's Talk</h3>
           </div>
         </div>
       </content>
@@ -277,5 +312,9 @@
       </p>
       <p>All Right Reserved</p>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/2bf194fb8e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
