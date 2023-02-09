@@ -23,6 +23,10 @@
   #partyFiguresImg {
     width: 100%;
   }
+
+  #contactUsImgTag {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
