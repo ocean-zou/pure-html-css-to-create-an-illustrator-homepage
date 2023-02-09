@@ -3,10 +3,12 @@
     display: none;
   }
 }
+
 @media (max-width: 768px) {
-  .social {
-    display: none;
+  #head {
+    flex-direction: column;
   }
+
   #videoPlay,
   #infor,
   #myServicesCardPictureBook,
@@ -15,19 +17,17 @@
   #cardCat,
   #cardCloud,
   #cardSchool,
-  #cardPortfolio {
+  #cardPortfolio,
+  #figureLeftImg,
+  #figureRightImg,
+  #partyFiguresImg {
     width: 100%;
   }
-
-  .streetFigures {
-    flex-direction: column;
-  }
-  .partyFigures {
-    flex-direction: column;
-  }
 }
+
 @media (max-width: 576px) {
-  #head {
+
+  /* #head {
     width: 60%;
   }
   #main {
@@ -35,8 +35,27 @@
   }
   .footer {
     width: 60%;
-  }
-  #contactUsImgTag {
+  } */
+  #contactUsImgTag,
+  #Prices {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+
+  #tagCat,
+  #tagCloud,
+  #tagSchool,
+  #tagPortfolio {
+    bottom: 8rem;
+  }
+
+  #name,
+  #phone,
+  #email,
+  #country,
+  #message {
+    width: 10rem;
   }
 }
