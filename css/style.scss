@@ -1,44 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+/*main color for header and footer*/
 :root {
   --main-Color: linear-gradient(to right, red, yellow);
   --btn-Color: orange;
 }
+
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   grid-gap: 1rem;
-
   max-width: 1200px;
 }
 
+/*header setting*/
 header {
   width: 80%;
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background: var(--main-Color);
   color: black;
   padding: 1rem 1rem;
-
   align-items: center;
   border-radius: 1rem 1rem 0px 0px;
 }
+
 .logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
+
   img {
     width: 10rem;
     margin-right: 1rem;
   }
+
   .name {
     text-align: center;
     font-size: 1rem;
@@ -50,6 +57,7 @@ header {
   margin-top: 10px;
   font-weight: 600;
 }
+
 .sprite {
   background-image: url(../src/spritesheet.png);
   background-repeat: no-repeat;
@@ -80,14 +88,34 @@ header {
   height: 64px;
   background-position: -79px -79px;
 }
+
+/*main body setting*/
 main {
   width: 80%;
   display: flex;
 
+  /*content left side nav bar*/
   .nav {
+
+    /*animation--nav bar*/
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    animation-duration: 1s;
+    animation-name: fadeInLeft;
     width: 20%;
     padding: 1rem;
     border-right: 1px solid #ddd;
+
     li {
       color: #333;
       padding: 0px 0px 50px 0px;
@@ -101,30 +129,36 @@ main {
         position: fixed;
         transition: all 0.8s ease 0s;
         color: black;
+
         &:hover {
           transform: translateY(-4px);
         }
       }
     }
   }
+
+  /*content right side */
   content {
     width: 100%;
-
     margin: 1rem auto;
-    // padding: 2rem;
     padding: 0 1rem;
+
+    /*content right side--homepage 1/6 */
     .homepageContent {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 3rem;
+
       .video {
         width: 50%;
         height: 20rem;
+
         video {
           width: 100%;
           height: 20rem;
         }
       }
+
       .info {
         display: flex;
         flex-direction: column;
@@ -133,21 +167,42 @@ main {
         padding: 1rem;
         width: 40%;
 
+        /*animation--info*/
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0);
+          }
+
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeInRight;
+
         h3 {
           width: 100%;
           font-weight: 800;
         }
+
         p {
           text-align: justify;
         }
+
         .btn {
           width: 100%;
+
           button {
             padding: 1rem 0;
             background-color: var(--btn-Color);
             border: none;
             border-radius: 0.5rem;
             margin-top: 1rem;
+
             a {
               text-decoration: none;
               padding: 1rem 2rem;
@@ -159,35 +214,49 @@ main {
       }
     }
 
+    /*content right side--myServices 2/6 */
     .title {
       text-align: center;
+
       h3 {
         font-size: 2rem;
         padding-bottom: 1rem;
       }
     }
+
     .myServices {
       display: flex;
       flex-wrap: wrap;
       text-align: center;
       justify-content: space-between;
+
       .myServicesCard {
         width: 30%;
+
         i {
           font-size: 8rem;
           color: var(--btn-Color);
           padding: 2rem;
         }
+
         p {
           padding: 2rem 1rem;
         }
       }
     }
+
+    /*content right side--myRecentWorks 3/6 */
     .portfolio {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
       .card {
+        &:hover {
+          background-color: rgba(255, 165, 0, 0.6);
+          z-index: 1;
+        }
+
         width: 50%;
         height: 30rem;
         position: relative;
@@ -201,144 +270,167 @@ main {
           border-radius: 8px;
           padding: 0.2rem;
         }
+
         .textinfo {
           position: absolute;
           bottom: 2rem;
           left: 1rem;
         }
+
         img {
           width: 100%;
           height: 80%;
         }
       }
     }
+
+    /*content right side--figures 4/6 */
     .streetFigures {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
       .figureLeft {
         padding: 10px;
         width: 66.6%;
+
         img {
           width: 100%;
         }
       }
+
       .figureRight {
         width: 33.3%;
+
         img {
           padding: 10px;
           width: 100%;
         }
       }
     }
+
     .partyFigures {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-bottom: 1rem;
+
       img {
         width: 30%;
-        padding: 10px;
+        padding: 1rem;
       }
     }
-    .priceSliders {
-      margin-bottom: 4rem;
-      .sliders {
-        width: 32rem;
-        height: 20rem;
-        border-radius: 50%;
-        // border: 2px solid var(--btn-Color);
-        overflow: hidden;
-        .imgSlides {
-          position: relative;
-          width: 100%;
-          display: flex;
-          input {
-            display: none;
-          }
-          .slide {
-            img {
-              width: 32rem;
-              height: 20rem;
-            }
-          }
-        }
-        .navigation {
-          .navigationPosition {
-            position: absolute;
-            // width: 10rem;
+
+    /*content right side--prices 5/6 */
+    .pricesContent {
+      display: none;
+
+      .priceSliders {
+        margin-bottom: 4rem;
+
+        .sliders {
+          width: 32rem;
+          height: 20rem;
+          border-radius: 50%;
+          overflow: hidden;
+
+          .imgSlides {
+            position: relative;
+            width: 100%;
             display: flex;
-            flex-wrap: wrap;
-            // justify-content: center;
 
-            .navigationBtn {
-              border: 2px solid var(--btn-Color);
-              padding: 5px;
-              border-radius: 10px;
-              cursor: pointer;
-              transition: 1s;
-              &:hover {
-                background: var(--btn-Color);
-              }
-              &:not(:last-child) {
-                margin-right: 40px;
-              }
+            input {
+              display: none;
             }
 
-            &:last-child {
-              margin-right: 0;
+            .slide {
+              img {
+                width: 32rem;
+                height: 20rem;
+              }
+            }
+          }
+
+          .navigation {
+            .navigationPosition {
+              position: absolute;
+              display: flex;
+              flex-wrap: wrap;
+
+              .navigationBtn {
+                border: 2px solid var(--btn-Color);
+                padding: 5px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 1s;
+
+                &:hover {
+                  background: var(--btn-Color);
+                }
+
+                &:not(:last-child) {
+                  margin-right: 40px;
+                }
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
             }
           }
         }
-      }
 
-      /* The checked attribute is used with
-      reference to <input type="radio">,
-      when radio button is clicked the
-      class will shift w.r.t  left margin
-      as mentioned which results in image
-      slider */
+        #radio1:checked~.first {
+          margin-left: 0;
+        }
 
-      #radio1:checked ~ .first {
-        margin-left: 0;
-      }
-      #radio2:checked ~ .first {
-        margin-left: -100%;
-      }
+        #radio2:checked~.first {
+          margin-left: -100%;
+        }
 
-      #radio3:checked ~ .first {
-        margin-left: -200%;
-      }
+        #radio3:checked~.first {
+          margin-left: -200%;
+        }
 
-      #radio4:checked ~ .first {
-        margin-left: -300%;
-      }
+        #radio4:checked~.first {
+          margin-left: -300%;
+        }
 
-      #radio5:checked ~ .first {
-        margin-left: -400%;
+        #radio5:checked~.first {
+          margin-left: -400%;
+        }
       }
     }
+
+    /*content right side--contactUs 6/6 */
     .contactUs {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
       .contactUsImg {
         margin-top: 4rem;
         position: relative;
+
         i {
           font-size: 10rem;
           color: var(--btn-Color);
         }
+
         h3 {
           position: absolute;
           top: 4rem;
           right: 3rem;
         }
       }
+
       .contactUsTitle {
         h3 {
           font-size: 2rem;
           text-align: center;
           padding-bottom: 1rem;
         }
+
         input[type="text"],
         select,
         textarea {
@@ -348,9 +440,6 @@ main {
           margin-bottom: 0.5rem;
           border: 1px solid #ccc;
           border-radius: 8px;
-          // box-sizing: border-box;
-          // margin-top: 6px;
-          // margin-bottom: 16px;
         }
 
         input[type="submit"] {
@@ -367,6 +456,7 @@ main {
     }
   }
 }
+
 footer {
   width: 80%;
   background: var(--main-Color);
